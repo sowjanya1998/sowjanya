@@ -13,7 +13,7 @@ void main()
 		//scanf_s("%s", str[i], sizeof(str[i]));
 	for (i = 0; i < 10; i++)
 	{
-		printf("%s\n", str[i]);
+		printf("%s\n", str[i]);//str[i] is used to printstring
 	}
 	getchar();
 }
