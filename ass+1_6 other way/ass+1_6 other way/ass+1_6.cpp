@@ -1,25 +1,26 @@
 #include<iostream>
 using namespace std;
-class result;
-class point
-{
-	int x;
-	int y;
-public:
-	point(int a,int b)
-	{
-		x = a;
-		y = b;
-	}
-	friend void result:: distance(point, point);
-	//friend class result;
-};
+class point;
 class result
 {
 public:
 	void distance(point, point);
 };
-void result:: distance(point p1, point p2)
+class point
+{
+	int x;
+	int y;
+public:
+	point(int a, int b)
+	{
+		x = a;
+		y = b;
+	}
+	friend void result::distance(point p1, point p2);
+	//friend class result;
+};
+
+void result::distance(point p1, point p2)
 {
 	int d1, d2, dis;
 	d1 = pow((p2.x - p1.x), 2);
