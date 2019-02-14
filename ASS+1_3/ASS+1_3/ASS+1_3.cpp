@@ -40,8 +40,8 @@ complex add(complex &a, complex &b)
 complex mul(complex &a, complex &b)
 {
 	complex c3;
-	c3.real = a.real*b.real;
-	c3.img = a.img*b.img;
+	c3.real = (a.real*b.real) - (a.img*b.img);
+	c3.img = (a.real*b.img) + (a.img*b.real);
 	return c3;
 }
 
