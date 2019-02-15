@@ -11,6 +11,10 @@ class student
 	int totalmarks;
 	char grade;
 public:
+	student()
+	{
+		cout << "hi";
+	}
 	friend istream& operator>>(istream& cin, student &s);
 	friend ostream& operator<<(ostream& cout, student);
 	friend void generate_res(student s[], const int n);
