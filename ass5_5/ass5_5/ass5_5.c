@@ -35,7 +35,7 @@ void main()
 	getchar();
 	int i, j, days = 0;
 	if (d1.m==d2.m && d1.y==d2.y)
-		days = d2.d = d1.d;
+		days = d2.d -  d1.d;
 	else
 	{
 		for (i = d1.y; i < d2.y; i++)
