@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"header.h"
+#include"Header1.h"
 int main()
 {
 	float a, b, result;

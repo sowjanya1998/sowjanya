@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
-class result;
+class point;
+class result
+{
+public:
+	void distance(point, point);
+};
 class point
 {
 	int x;
@@ -14,11 +19,7 @@ public:
 	friend void result:: distance(point, point);
 	//friend class result;
 };
-class result
-{
-public:
-	void distance(point, point);
-};
+
 void result:: distance(point p1, point p2)
 {
 	int d1, d2, dis;

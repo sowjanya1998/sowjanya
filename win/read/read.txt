@@ -1,0 +1,95 @@
+#include<Windows.h>
+#include<stdio.h>
+#include<tchar.h>
+#include<stdlib.h>
+#define MAX 100
+void main()
+{
+	HANDLE hfile;
+	char *buffer;
+	LPCSTR filename = "text.txt";
+	/*hfile = CreateFile(filename, NULL, FILE_SHARE_WRITE, NULL, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (INVALID_HANDLE_VALUE == hfile)
+	{
+		_tprintf(_T(" file not created"));
+		exit(0);
+	}
+	else
+		_tprintf(_T("file created"));
+
+	close(hfile);
+	return 0;*/
+
+	DWORD nbw;
+	hfile = CreateFileA(filename, GENERIC_ALL, FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (INVALID_HANDLE_VALUE == hfile)
+	{
+		_tprintf(_T(" file not created"));
+		exit(0);
+	}
+	buffer = (char*)malloc(sizeof(char)*MAX);
+	ZeroMemory(buffer, MAX);
+	buffer = "HELLO GI";
+	//strcpy_s(buffer,strlen(buffer), "hello hi");
+
+	int check1 = WriteFile(filename, buffer, MAX, &nbw, NULL);
+	if (check1 == 0)
+	{
+		_tprintf(_T("cannot write"));
+		//	printf("%s", GetLastError());
+			//DWORD DW=GetLostError();
+			//printf("%d", GetLostError());
+		exit(0);
+	}
+
+
+
+
+}#include<Windows.h>
+#include<stdio.h>
+#include<tchar.h>
+#include<stdlib.h>
+#define MAX 100
+void main()
+{
+	HANDLE hfile;
+	char *buffer;
+	LPCSTR filename = "text.txt";
+	/*hfile = CreateFile(filename, NULL, FILE_SHARE_WRITE, NULL, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (INVALID_HANDLE_VALUE == hfile)
+	{
+		_tprintf(_T(" file not created"));
+		exit(0);
+	}
+	else
+		_tprintf(_T("file created"));
+
+	close(hfile);
+	return 0;*/
+
+	DWORD nbw;
+	hfile = CreateFileA(filename, GENERIC_ALL, FILE_SHARE_WRITE, NULL, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (INVALID_HANDLE_VALUE == hfile)
+	{
+		_tprintf(_T(" file not created"));
+		exit(0);
+	}
+	buffer = (char*)malloc(sizeof(char)*MAX);
+	ZeroMemory(buffer, MAX);
+	buffer = "HELLO GI";
+	//strcpy_s(buffer,strlen(buffer), "hello hi");
+
+	INT check1 = WriteFile(filename, buffer, MAX, &nbw, NULL);
+	if (check1 == 0)
+	{
+		_tprintf(_T("cannot write"));
+		//	printf("%s", GetLastError());
+			//DWORD DW=GetLostError();
+			//printf("%d", GetLostError());
+		exit(0);
+	}
+
+
+
+
+}

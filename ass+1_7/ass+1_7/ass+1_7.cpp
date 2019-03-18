@@ -14,7 +14,7 @@ public:
 	}
 	void mul(matrix s1, matrix s2)
 	{
-		multiplication(s1, s2);
+		//multiplication(s1, s2);
 		int i, j, k, c = 0;
 		if (s1.n == s2.m)
 		{
@@ -89,7 +89,7 @@ int main()
 	matrix a1(3, 2), a2(3, 1);
 	a1.set_data();
 	a2.set_data();
-	multiplication m;
+	multiplication m(a1, a2);
 	m.mul(a1,a2);
 
 	getchar();

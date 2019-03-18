@@ -6,6 +6,7 @@ int main()
 	x0 = 0, x1 = 0, x2 = 0, x3 = 0, x4 = 0;
 	printf("Enter a +ve no less than 32: ");
 	scanf_s("%d", &a);
+	getchar();
 	if (a < 1 || a > 31)
 	{
 		printf("Entered number is out of range\n");
@@ -22,7 +23,7 @@ int main()
 	else
 	{
 		printf("%d\n", x0);
-		return 0;
+		//return 0;
 	}
 	if (a != 0)
 	{
@@ -32,7 +33,7 @@ int main()
 	else
 	{
 		printf("%d%d\n", x1, x0);
-		return 0;
+		//return 0;
 	}
 	if (a != 0)
 	{
@@ -52,9 +53,10 @@ int main()
 	else
 	{
 		printf("%d%d%d%d\n", x3, x2, x1, x0);
-		return 0;
+		//return 0;
 	}
 	printf("%d%d%d%d%d\n", x4, x3, x2, x1, x0);
-	getch();
+	getchar();
+	getchar();
 	return 0;
 }

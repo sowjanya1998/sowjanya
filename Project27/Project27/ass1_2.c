@@ -3,7 +3,7 @@ int main()
 {
 	char text[80];
 	int i, letters = 0, digits = 0, space = 0, tabs = 0, sp = 0;
-	scanf_s("%[^\n]s", text);
+	gets_s(text, 80);
 	for (i = 0; text[i] != '\0'; i++)
 	{
 		if ((text[i] >= 97 && text[i] <= 122) || (text[i] >= 65 && text[i] <= 90))
@@ -22,5 +22,6 @@ int main()
 	printf("%d space", space);
 	printf("%d tabs", tabs);
 	printf("%d specialcharacters", sp);
+	getchar();
 	return 0;
 }

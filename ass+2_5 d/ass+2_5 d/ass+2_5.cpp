@@ -84,25 +84,29 @@ ostream& operator<<(ostream& cout, string1 s)
 }
 int main()
 {
-	string1 s1, s2("welcome"), s3[3], s4, s5("hi");
-	cout << "exe" << endl;
+	string1 s1, s2("welcome");  
+	cout << "execution" << endl;
 	s1.display();
 	s2.display();
 	s1 + s2;
-	cout << "add" << endl;
+	cout << "concat two string" << endl;
 	s1.display();
+	string1 s3[3];
 	s3[0].display();
 	cout << "ind" << endl;
 	cout << s3[0];
+	
 	s3[1].display();
 	cout << "change it to p" << endl;
 	s3[1] = "p";
 	cout << s3[1] << endl;
+	cout << "assignment operator" << endl;
 	cout << s3[1] << endl;
 	cout << s3[2] << endl;
 	cout << "ass" << endl;
 	s3[2] = s3[1];
 	s3[2].display();
+	string1 s4, s5("hi");
 	s4.display();
 	s5.display();
 	cout << "ass" << endl;
